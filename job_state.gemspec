@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.version     = JobState::VERSION
   s.authors     = ["Wyatt Greene", "Ian McLean"]
   s.summary     = "This engine provides a way to poll resque jobs for their status and display to the user."
-
+  s.homepage    = "https://github.com/dmcouncil/job_state"
+  s.licenses    = ['MIT']
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
