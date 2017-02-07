@@ -2,7 +2,7 @@
 
 ## Purpose
 
-JobState allows your users to see real-time updates of tasks that you've sent to Resque.  
+JobState allows your users to see real-time updates of tasks that you've sent to Resque.
 
 JobState is a Rails engine that houses the boilerplate Ajax and [resque-status](https://github.com/quirkey/resque-status) setup you would have to rewrite for every page you wanted to have this behavior.
 
@@ -113,3 +113,9 @@ The data object contains one attribute per progress metric that you set and it a
 ## Issues
 
 The way this is currently designed, you can only have one job status being polled at a time on any given page.
+
+## Contributors
+
+Swatches was originally developed by [Wyatt Greene](/techiferous) and is maintained by [District Management Group][1].
+
+[1]: https://dmgroupK12.com/
