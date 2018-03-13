@@ -112,10 +112,11 @@ The data object contains one attribute per progress metric that you set and it a
 
 ## Issues
 
-The way this is currently designed, you can only have one job status being polled at a time on any given page.
+* The way this is currently designed, you can only have one job status being polled at a time on any given page.
+* We've relaxed the version pin on Rails to be compatible with Rails 5. We have not tested job_state on Rails 5, but this pin change was necessary to allow rack (and, more importantly, rack-protection) to update past a security issue.
 
 ## Contributors
 
-Swatches was originally developed by [Wyatt Greene](/techiferous) and is maintained by [District Management Group][1].
+job_state was originally developed by [Wyatt Greene](/techiferous) and is maintained by [District Management Group][1].
 
 [1]: https://dmgroupK12.com/
