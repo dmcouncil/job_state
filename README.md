@@ -18,7 +18,7 @@ Mount the engine in your routes file like this:
 
 Notice that you should restrict which users have access to the job_state resources.
 
-If you wish to [use JobState data in JavaScript](#Ajax), include the job-state.js file in your application. You can include it in your view manually with `javascript_include_tag "job_state/job-state", or include it in your manifest file like so:
+If you wish to [use JobState data in JavaScript](#Ajax), include the job-state.js file in your application. You can include it in your view manually with `javascript_include_tag "job_state/job-state"`, or include it in your manifest file like so:
 
     //= require job_state/job-state
 
@@ -100,15 +100,17 @@ You can access a job state's data from JavaScript. To do this, first include the
       update: function(data) {
         $('.distance-run-so-far').text(data.miles_run);
       },
-      success: function() {
+      success: function(data) {
         location.reload();
       },
-      error: function() {
+      error: function(data) {
         alert('The job done failed.');
       }
     });
 
 The data object contains one attribute per progress metric that you set and it also contains an attribute called job_state that is either 'success', 'error' or 'working'.
+
+The JobState javascript will poll every second (unless you've changed the `pollingPeriod` as shown in the example above) and then invoke the callback methods passed to it as the `update`, `success`, or `error` attributes of the argument object. As of version 0.0.4, the data returned from the API is passed to the callbacks as an argument, so the callback can take action using any data returned (such as advancing a progress bar in the update method, or redirecting to a result in the success callback).
 
 ## Issues
 

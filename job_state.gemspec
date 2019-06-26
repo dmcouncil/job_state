@@ -7,7 +7,7 @@ require "job_state/version"
 Gem::Specification.new do |s|
   s.name        = "job_state"
   s.version     = JobState::VERSION
-  s.authors     = ["Wyatt Greene", "Ian McLean"]
+  s.authors     = ["Wyatt Greene", "Ian McLean", "Parker Morse"]
   s.summary     = "This engine provides a way to poll resque jobs for their status and display to the user."
   s.homepage    = "https://github.com/dmcouncil/job_state"
   s.licenses    = ['MIT']

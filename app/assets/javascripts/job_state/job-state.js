@@ -20,12 +20,12 @@
         success: function(data) {
           if (data.job_state == 'success') {
             if (self._successFn) {
-              self._successFn();
+              self._successFn(data);
             }
           }
           else if (data.job_state == 'error') {
             if (self._errorFn) {
-              self._errorFn();
+              self._errorFn(data);
             }
           }
           else {
