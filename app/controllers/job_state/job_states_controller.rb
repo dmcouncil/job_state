@@ -3,7 +3,7 @@ module JobState
 
     respond_to :html, :json
 
-    before_filter :fetch_job_state, only: [:show]
+    before_action :fetch_job_state, only: [:show]
 
     def show
       respond_to do |format|
