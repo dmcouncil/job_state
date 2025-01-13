@@ -123,6 +123,14 @@ module JobState
       @job_uuid
     end
 
+    #**********************************************************************
+    # KILLING
+    #
+    # This method kills the job
+    def kill
+      Resque::Plugins::Status::Hash.kill(@job_uuid)
+    end
+
   private
 
     def status_hash

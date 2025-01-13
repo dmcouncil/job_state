@@ -11,6 +11,14 @@
     self._poll();
   };
 
+  self.killJob = function() {
+    $.ajax({
+      url: '/job_state/job_states/' + self._jobUuid + '/kill',
+      type: 'POST',
+      dataType: 'json'
+    });
+  }
+
   self._poll = function() {
     setTimeout(function() {
       $.ajax({

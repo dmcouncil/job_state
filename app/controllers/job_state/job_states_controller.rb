@@ -3,7 +3,7 @@ module JobState
 
     respond_to :html, :json
 
-    before_action :fetch_job_state, only: [:show]
+    before_action :fetch_job_state
 
     def show
       respond_to do |format|
@@ -11,6 +11,11 @@ module JobState
           render json: @job_state.full_info
         end
       end
+    end
+
+    def kill
+      @job_state.kill
+      head :ok
     end
 
   private
